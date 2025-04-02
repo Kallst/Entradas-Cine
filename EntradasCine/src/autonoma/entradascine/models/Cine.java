@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 public class Cine {
     private ArrayList<Pelicula> peliculas = new ArrayList<Pelicula>();
+    private Boleta boleta = new Boleta ();
+    private Factura factura = new Factura();
+    private Funcion funcion = new Funcion();
 
     public Cine() {
     }
@@ -35,6 +38,10 @@ public class Cine {
     
     public void venderBoleta (Usuario usuario, Pelicula pelicula, Funcion funcion)
     {
+        
+        this.boleta.setUsuario(usuario);
+        this.factura.añadirBoleta(boleta);
+        
         
     }
 }

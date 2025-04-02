@@ -4,6 +4,7 @@ package autonoma.entradascine.models;
  *
  * @author LAPTOP
  */
+
 public class Boleta {
     private Usuario usuario = new Usuario();
     private float precioFinal;
@@ -42,8 +43,8 @@ public class Boleta {
     
     public float calcularPrecioFinal ()
     {
-        float precioFinal = 0;
-        precioFinal = usuario.descuentoPorEdad() + funcion.calcularDescuentoHorario();
+        float precioFinal = usuario.descuentoPorEdad() + funcion.calcularDescuentoHorario();
+        
         return precioFinal;
     }
 }

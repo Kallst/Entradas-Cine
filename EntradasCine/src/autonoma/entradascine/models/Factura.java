@@ -4,7 +4,9 @@ import java.util.ArrayList;
  *
  * @author LAPTOP
  */
+
 public class Factura {
+    
     private ArrayList<Boleta> boletas = new ArrayList<>();
     private float total;
 
@@ -19,8 +21,8 @@ public class Factura {
         return boletas;
     }
 
-    public void setBoletas(ArrayList<Boleta> boletas) {
-        this.boletas = boletas;
+    public void añadirBoleta (Boleta boleta) {
+        this.boletas.add(boleta);
     }
 
     public float getTotal() {

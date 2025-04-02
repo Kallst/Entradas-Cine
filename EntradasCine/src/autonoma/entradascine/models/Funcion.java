@@ -4,18 +4,17 @@ package autonoma.entradascine.models;
  *
  * @author LAPTOP
  */
+
 public class Funcion {
     
     private String horario;
-    private float descuento;
     private Pelicula peli = new Pelicula ();
 
     public Funcion() {
     }
 
-    public Funcion(String horario, float descuento, Pelicula peli) {
+    public Funcion(String horario, Pelicula peli) {
         this.horario = horario;
-        this.descuento = descuento;
         this.peli = peli;
     }
 
@@ -25,14 +24,6 @@ public class Funcion {
 
     public void setHorario(String horario) {
         this.horario = horario;
-    }
-
-    public float getDescuento() {
-        return descuento;
-    }
-
-    public void setDescuento(float descuento) {
-        this.descuento = descuento;
     }
     
     public float calcularDescuentoHorario()
@@ -46,6 +37,10 @@ public class Funcion {
         else if (this.horario.equals("Funcion en la tarde"))
         {
             descuentoHorario = (float) (peli.getCostoBase() - (peli.getCostoBase() * 0.10)); 
+            return descuentoHorario;
+        }
+        else if (this.horario.equals("Funcion en la noche"))
+        {
             return descuentoHorario;
         }
         else

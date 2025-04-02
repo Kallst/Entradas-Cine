@@ -40,5 +40,10 @@ public class Boleta {
         this.funcion = funcion;
     }
     
-    
+    public float calcularPrecioFinal ()
+    {
+        float precioFinal = 0;
+        precioFinal = usuario.descuentoPorEdad() + funcion.calcularDescuentoHorario();
+        return precioFinal;
+    }
 }
